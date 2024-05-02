@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Wardrobe</title>
     <link rel="stylesheet" href="WebData/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -64,6 +65,13 @@
               .catch((message) => { alert(message); });
       };
       document.body.appendChild(script);
+    </script>
+    <script>
+      const tg = window.Telegram.WebApp;
+      tg.BackButton.show();
+      tg.BackButton.onClick(() => {
+        window.history.back()
+      });
     </script>
   </body>
 </html>
