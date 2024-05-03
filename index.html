@@ -18,6 +18,12 @@
       </div>
     </div>
     <script>
+      const tg = window.Telegram.WebApp;
+      tg.BackButton.show();
+      tg.BackButton.onClick(() => {
+        window.history.back()
+      });
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Wardrobe_v21.12.02-2(Uncompressed).loader.js";
       var config = {
@@ -65,13 +71,6 @@
               .catch((message) => { alert(message); });
       };
       document.body.appendChild(script);
-    </script>
-    <script>
-      const tg = window.Telegram.WebApp;
-      tg.BackButton.show();
-      tg.BackButton.onClick(() => {
-        window.history.back()
-      });
     </script>
   </body>
 </html>
